@@ -1,0 +1,139 @@
+.works__button {
+ display: block;
+ margin-top: 88px;
+ padding: 0 171px;
+ @media screen and (max-width: 450px) {
+    padding: 0 0;
+    margin: 88px 0;
+  }
+}
+
+.button02 {
+    display: block;
+    width: 150px;
+    padding: 10px 0;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #83776a;
+    color: #83776a;
+    text-align: center;
+    transition: 0.2s;
+    position: relative;
+    @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.button02::after {
+  position: absolute;
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #83776a;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -56px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+.button02:hover {
+  background-color: #888;
+  color: #fff;
+}
+
+.button03 {
+    width: 150px;
+    padding: 10px 0;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #83776a;
+    color: #83776a;
+    text-align: center;
+    transition: 0.2s;
+    position: relative;
+    display: none;
+    @media screen and (max-width: 768px) {
+    display: block;
+    margin: 0 auto 160px;
+  }
+}
+
+.button03::after {
+  position: absolute;
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #83776a;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -56px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+.button03:hover {
+  background-color: #888;
+  color: #fff;
+}
+
+.button003 a {
+    background: #5ec8fd;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 260px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.button003 a:hover {
+    background: #313131;
+    color: #FFF;
+}
+
+.button003 a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #313131;
+    border-right: 3px solid #313131;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+
+.button003 a:hover:after {
+    border-color: #FFF;
+}
+
+.bottom-text {
+  width: 700px;
+  display: block;
+  margin: auto;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 100px;
+    margin-top: -10px;
+   }
+   @media screen and (max-width: 450px) {
+    width: 100%;
+    padding: 0 45px;
+    margin-top: -10px;
+   }
+}
+
+.bottom-text p {
+  margin: 5px 0;
+}

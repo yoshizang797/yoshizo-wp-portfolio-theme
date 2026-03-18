@@ -1,0 +1,336 @@
+@use "../base/variables" as *;
+
+/*.grid {
+  display: grid;
+  max-width: 1200px;
+  height: auto;
+  margin: 100px auto 160px auto;
+  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "A B C D" "E F G H" "I J K L";
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "A B C" "D E F" "G H I" "J K L";
+    gap: 25px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "A B" "C D" "E F" "G H" "I J";
+    gap: 25px;
+  }
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+/*.grid__img {
+  margin-bottom: 4px;
+  vertical-align: top;
+  margin: 10px auto;
+  @media screen and (max-width: 768px) {
+    width: 290px;
+    height: auto;
+  }
+}*/
+
+/*.grid__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  @media screen and (max-width: 768px) {
+    width: 221px;
+    margin: 0 auto;
+  }
+}
+
+.grid__item:nth-child(1) {
+  grid-area: A;
+}
+
+.grid__item:nth-child(2) {
+  grid-area: B;
+}
+
+.grid__item:nth-child(3) {
+  grid-area: C;
+}
+
+.grid__item:nth-child(4) {
+  grid-area: D;
+}
+
+.grid__item:nth-child(5) {
+  grid-area: E;
+}
+
+.grid__item:nth-child(6) {
+  grid-area: F;
+}
+
+.grid__item:nth-child(7) {
+  grid-area: G;
+}
+
+.grid__item img {
+  transform: scale(1);
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: block;
+  border-radius: 8px;
+}
+
+.grid__item a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.grid__item a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 15px solid rgba(255, 255, 255, 0.6);  
+  opacity: 0;              
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+.grid__item:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.grid__item:hover a::after {
+  opacity: 1;
+}
+
+.grid__btnWrap {
+  text-align: center;
+  margin-bottom: 120px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.grid__btnText {
+  width: 240px;
+  height: 50px;
+  color: $color-bg;
+  display: inline-block;
+  padding: 12px 0px;
+  border: solid 1px #cacaca;
+}
+
+.grid__sideText {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 15px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  -webkit-transform: rotate(270deg) translate(-19%, 30%);
+          transform: rotate(270deg) translate(-19%, 30%);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid__sideText::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: block;
+  margin-right: 24px;
+}*/
+
+/* ================================
+   Grid Layout (レスポンシブ対応)
+=================================== */
+.grid {
+  display: grid;
+  max-width: 1200px;
+  height: auto;
+  margin: 100px auto 160px auto;
+  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "A B C D" "E F G H" "I J K L";
+
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "A B C" "D E F" "G H I" "J K L";
+    gap: 25px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "A B" "C D" "E F" "G H" "I J";
+    gap: 25px;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+/* ================================
+   Grid Items
+=================================== */
+.grid__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 221px;
+    margin: 0 auto;
+  }
+}
+
+/* グリッドエリア指定 */
+.grid__item:nth-child(1) { grid-area: A; }
+.grid__item:nth-child(2) { grid-area: B; }
+.grid__item:nth-child(3) { grid-area: C; }
+.grid__item:nth-child(4) { grid-area: D; }
+.grid__item:nth-child(5) { grid-area: E; }
+.grid__item:nth-child(6) { grid-area: F; }
+.grid__item:nth-child(7) { grid-area: G; }
+.grid__item:nth-child(8) { grid-area: H; }
+.grid__item:nth-child(9) { grid-area: I; }
+.grid__item:nth-child(10) { grid-area: J; }
+.grid__item:nth-child(11) { grid-area: K; }
+.grid__item:nth-child(12) { grid-area: L; }
+
+/* ================================
+   Image + Hover Effect
+=================================== */
+.grid__item a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+/* 画像 */
+.grid__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* 拡大 */
+.grid__item:hover img {
+  transform: scale(1.05);
+}
+
+/* 半透明の枠 */
+.grid__item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ホバー時に枠を表示 */
+.grid__item:hover::after {
+  opacity: 1;
+}
+
+/* タイトルテキスト */
+.works-piece-title {
+  //position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 14px;
+  z-index: 3;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ================================
+   フェードインアニメーション
+=================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   ボタン・サイドテキスト（任意）
+=================================== */
+.grid__btnWrap {
+  text-align: center;
+  margin-bottom: 120px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.grid__btnText {
+  width: 240px;
+  height: 50px;
+  color: #000;
+  display: inline-block;
+  padding: 12px 0px;
+  border: solid 1px #cacaca;
+}
+
+.grid__sideText {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 15px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: rotate(270deg) translate(-19%, 30%);
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+}
+
+.grid__sideText::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: block;
+  margin-right: 24px;
+}
+
+
