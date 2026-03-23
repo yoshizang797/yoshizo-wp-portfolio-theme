@@ -50,3 +50,7 @@ https://yoshizo797.com
 ## Author
 
 Yoshihiko Kuramitsu
+
+## Update
+
+Initial Git commit test.
