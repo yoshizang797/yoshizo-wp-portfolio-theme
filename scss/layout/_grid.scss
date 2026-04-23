@@ -1,0 +1,164 @@
+@use "../base/variables" as *;
+
+/* ================================
+   Grid Layout (レスポンシブ対応)
+=================================== */
+.grid {
+  display: grid;
+  max-width: 1200px;
+  height: auto;
+  margin: 100px auto 160px auto;
+  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+/* ================================
+   Grid Items
+=================================== */
+.grid__item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 221px;
+    margin: 0 auto;
+  }
+}
+
+/* ================================
+   Image + Hover Effect
+=================================== */
+.grid__item a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+/* 画像 */
+.grid__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.fade-in.item1 {
+  width: 100%;
+  max-width: 700px;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* 拡大 */
+.grid__item:hover img {
+  transform: scale(1.05);
+}
+
+/* 半透明の枠 */
+.grid__item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ホバー時に枠を表示 */
+.grid__item:hover::after {
+  opacity: 1;
+}
+
+/* タイトルテキスト */
+.works-piece-title {
+  //position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 14px;
+  z-index: 3;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ================================
+   フェードインアニメーション
+=================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   ボタン・サイドテキスト（任意）
+=================================== */
+.grid__btnWrap {
+  text-align: center;
+  margin-bottom: 120px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.grid__btnText {
+  width: 240px;
+  height: 50px;
+  color: #000;
+  display: inline-block;
+  padding: 12px 0px;
+  border: solid 1px #cacaca;
+}
+
+.grid__sideText {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 15px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: rotate(270deg) translate(-19%, 30%);
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+}
+
+.grid__sideText::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: block;
+  margin-right: 24px;
+}
+
+
