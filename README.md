@@ -12,6 +12,9 @@ It is designed to support **safe improvements and ongoing maintenance of existin
 
 ---
 
+## ■ Preview
+![Portfolio Screenshot](./img/screenshot.png)
+
 ## ■ Features
 - Custom WordPress theme (no pre-built theme used)
 - SCSS-based styling workflow
