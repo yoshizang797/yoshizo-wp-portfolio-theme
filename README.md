@@ -1,56 +1,66 @@
-# WordPress Portfolio Theme
+# Yoshihiko Portfolio WordPress Theme
 
-This repository contains a custom WordPress theme developed for my portfolio website.
+## ■ Overview
+This repository contains a custom WordPress theme developed for my portfolio site.
 
-## Overview
+The theme is built from scratch with a focus on:
+- clean structure
+- maintainability
+- responsive design
 
-This theme was originally built as a static HTML/CSS portfolio and later converted into a WordPress theme to enable content editing through the WordPress admin panel.
+It is designed to support **safe improvements and ongoing maintenance of existing websites**.
 
-The goal was to maintain the original design while implementing WordPress template structures.
+---
 
-## Technologies Used
+## ■ Features
+- Custom WordPress theme (no pre-built theme used)
+- SCSS-based styling workflow
+- Responsive design (mobile-first approach)
+- Simple and maintainable file structure
+- Built with consideration for future updates and modifications
 
-- HTML
-- CSS
-- JavaScript
-- PHP
-- WordPress
+---
 
-## Theme Structure
+## ■ Tech Stack
+- HTML / CSS / SCSS
+- JavaScript (basic interactions)
+- WordPress (PHP)
+- Git / GitHub
 
-Main template files included in this theme:
+---
 
-- style.css
-- functions.php
-- header.php
-- footer.php
-- front-page.php
-- page.php
-- page-about.php
+## ■ What I Do
+- Layout implementation from design
+- Responsive adjustments
+- Fixing layout issues (HTML / CSS)
+- WordPress theme customization and modification
 
-## Features
+---
 
-- Custom WordPress theme
-- Responsive layout
-- WordPress editable pages
-- Page template structure
-- Clean HTML/CSS implementation
+---
 
-## Development Environment
+## ■ Workflow
+1. Write styles in SCSS
+2. Compile to CSS
+3. Build as WordPress theme
+4. Manage versions with Git
+5. Deploy to production
 
-- Local by Flywheel (Local WP)
-- WordPress
-- FTP deployment to hosting server
+---
 
-## Live Website
+## ■ Strengths
+- Ability to improve existing WordPress sites without breaking functionality
+- Focus on stability and maintainable code
+- Suitable for maintenance, fixes, and incremental updates
 
-Portfolio site:  
-https://yoshizo797.com
+---
 
-## Author
+## ■ Note
+This theme is used for my personal portfolio and is continuously being improved.
 
-Yoshihiko Kuramitsu
+---
 
-## Update
-
+## ■ 日本語補足
+既存サイトを壊さず、着実に改善するWeb制作をテーマに開発しています。
+## ■ Project Structure (Simplified)
 Initial Git commit test.
