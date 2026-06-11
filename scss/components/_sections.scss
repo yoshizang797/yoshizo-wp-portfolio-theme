@@ -13,11 +13,12 @@ first view
 *******************************/
 .firstView {
   height: 900px;
-  margin: auto;
+  margin: 100px auto 0;
   background-size: cover;
   background-position: bottom;
   position: relative;
   padding-top: 80px;
+  overflow: hidden;
 }
 
 .firstView__inner {
@@ -27,40 +28,100 @@ first view
 
 .firstView__text {
   position: absolute;
-  bottom: 75px;
+  bottom: 150px;
   left: 25px;
-  display: flex;
+  display: block;
   align-items: center;
   font-family: "Noto Serif JP";
   font-size: 16px;
   font-weight: Medium;
   color: #333;
+  @media screen and (max-width: 600px) {
+    left: 0;
+  }
+}
+
+.firstView__text .firstView__github {
+  display: block;
+  max-width: 100%;
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .firstView__title {
   font-family: "Georgia";
   font-size: 32px;
   position: absolute;
-  top: 40%;
+  top: 30%;
   letter-spacing: 0.8em;
   width: 100%;
   text-align: center;
-  @media screen  and (max-width: 768px) {
+  @media screen  and (max-width: 842px) {
     width: auto;
     font-size: 24px;
+    position: relative;
+    margin-top: 185px;
   }
-  @media screen and (max-width: 419px) {
+  @media screen and (max-width: 631px) {
     top: 20%;
+  }
+  @media screen and (max-width: 397px) {
+    top: 12%;
+  }
+}
+
+.firstView_sab_text {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.6em;
+}
+
+.sp-br {
+  display: block;
+  @media screen  and (max-width: 842px) {
+    display: none;
+  }
+}
+
+.firstView__text_link {
+  position: absolute;
+  bottom: 120px;
+  left: 25px;
+  display: flex;
+  word-break: break-all;
+  align-items: center;
+  font-family: "Noto Serif jp";
+  font-size: 16px;
+  font-weight: Medium;
+  color: #333;
+  @media screen and (max-width: 600px) {
+    left: 0;
+  }
+  @media screen and (max-width: 341px) {
+    bottom: 77px;
   }
 }
 
 .fv-caption {
   font-family: "Georgia";
+  /*margin-top: 40px;*/
   position: absolute;
-  top: 50%;
-  letter-spacing: 0.8em;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.6em;
   width: 100%;
   text-align: center;
+
+  @media screen and (max-width: 1075px){
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 397px){
+    margin-top: 0;
+  }
 }
 
 .firstView__img {
@@ -118,10 +179,15 @@ concept
 }
 
 .concept__img {
-  width: 100%;
+  max-width: 90%;
+  width: auto;
   height: auto;
   opacity: 0.9;
   z-index: 40;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    }
 }
 
 .concept__title {
@@ -139,7 +205,7 @@ concept
 
 .concept__text {
   font-size: 32px;
-  margin: 158px 0 50px 0;
+  margin: 158px 0 25px 0;
   letter-spacing: 0.17em;
   display: flex;
   @media screen and (max-width: 768px) {
@@ -154,8 +220,7 @@ concept
 
 .concept-second-text {
   font-size: 16px;
-  margin-bottom: 66px;
-  line-height: 34px;
+  line-height: 30px;
   @media screen and (max-width: 768px) {
     margin-left: 0;
     margin-bottom: 22px;
@@ -163,6 +228,15 @@ concept
     font-size: 12px;
     text-align: center;
   } 
+}
+
+.concept-third-text{
+  font-size: large;
+  margin-bottom: 45px;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 781px) {
@@ -542,12 +616,16 @@ single
 .text-block-title {
   font-size: 16px;
   font-weight: bold;
-  margin-top: 100px;
+  margin-top: 46px;
   padding-bottom: 10px;
   border-bottom: dashed 1px;
   @media screen and (max-width: 768px) {
     margin-top: -80px;
   }
+}
+
+.text-block-title.is-demo {
+  margin-top: 45px;
 }
 
 .text-block {
@@ -644,7 +722,21 @@ page-about
 /*******************************
 contact-form
 *******************************/
+.contavt__title {
+  text-align: center;
+  margin: 160px auto 50px;
+}
 
+.contact__continer {
+  position: relative;
+  max-width: 565px;
+  width: auto;
+  height: auto;
+  margin: 50px auto 50px;
+  padding: 50px 100px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px gray;
+}
 
 /* ループ */
 

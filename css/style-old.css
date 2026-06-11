@@ -683,14 +683,14 @@ first view
   }
 }
 
-.fv-caption {
+/*.fv-caption {
   font-family: "Georgia";
   position: absolute;
   top: 50%;
   letter-spacing: 0.8em;
   width: 100%;
   text-align: center;
-}
+}*/
 
 .firstView__img {
   margin-left: auto;

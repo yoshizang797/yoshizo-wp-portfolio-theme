@@ -4,23 +4,23 @@
 CSSファイルの読み込み
 **************************************************/
 function my_enqueue_styles() {
-  // リセットCSS
-  wp_enqueue_style('ress', '//unpkg.com/ress/dist/ress.min.css', array(), false, 'all');
-
-  // テーマのstyle.css（テーマ認識用）
-  wp_enqueue_style('theme-style', get_stylesheet_uri(), array('ress'), false, 'all');
-
-  // SCSSから生成したCSS（これが本体）
   wp_enqueue_style(
-    'main-style',
-    get_template_directory_uri() . '/css/style.css',
-    array('theme-style'),
-    '1.0',
+    'ress',
+    'https://unpkg.com/ress/dist/ress.min.css',
+    array(),
+    null,
+    'all'
+  );
+
+  wp_enqueue_style(
+    'theme-style',
+    get_stylesheet_uri(),
+    array('ress'),
+    filemtime(get_template_directory() . '/style.css'),
     'all'
   );
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_styles');
-
 /**************************************************
 JSファイルの読み込み
 **************************************************/

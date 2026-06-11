@@ -7,6 +7,7 @@
         <br>自分が決めたこと、行動したことに対して、後悔しない・・・</p>
 </section> 
 
+<section id=""about class="about u-wrapper">
 <?php
 $front_id = (int) get_option('page_on_front'); // 表示設定で選ばれた固定ページID
 if ($front_id) {
