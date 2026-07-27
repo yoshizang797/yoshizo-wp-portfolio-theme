@@ -10,6 +10,7 @@
 
    
     <?php wp_head(); ?>
+    <meta name="google-site-verification" content="uXku5JUoj0FKSOim2hCeQ3uaLGgg0QONUnh6H3rorh0" />
 </head>
 
 <body <?php body_class(); ?>>
