@@ -74,18 +74,25 @@ function yoshizo_works_grid_shortcode($atts) {
       'order'     => 'ASC',
       'orderby'   => 'menu_order',
       'post_type' => 'post',
+      'category' => '',
     ),
     $atts,
     'works_grid'
   );
 
-  $q = new WP_Query(array(
+ $query_args = array(
   'post_type'      => 'post',
   'posts_per_page' => max(1, (int)$atts['posts']),
   'meta_key'       => 'works_order',
   'orderby'        => 'meta_value_num',
   'order'          => 'ASC',
-));
+);
+
+if (!empty($atts['category'])) {
+    $query_args['category_name'] = sanitize_text_field($atts['category']);
+}
+
+$q = new WP_Query($query_args);
 
   ob_start();
 
