@@ -24,28 +24,46 @@
           </div>
 
           <div class="text-block">
-            <P>使用ツール / <?php echo get_post_meta(get_the_ID(),'使用ツール',true); ?></p>
-		        <p>制作時間 / <?php echo get_post_meta(get_the_ID(),'制作時間',true); ?></p>
 
-             <?php if ($is_demo && $site_demo_url): ?>
-              <p>
-        デモサイト /
-        <a href="<?php echo esc_url($site_demo_url); ?>" target="_blank" rel="noopener noreferrer">
-          <?php echo esc_html($site_demo_url); ?>
-        </a>
-      </p>
+    <?php $is_english = has_category('works-en'); ?>
+
+    <p>
+        <strong><?php echo $is_english ? 'Tools' : '使用ツール'; ?></strong> /
+        <?php echo esc_html(get_post_meta(get_the_ID(), '使用ツール', true)); ?>
+    </p>
+
+    <p>
+        <strong><?php echo $is_english ? 'Development Time' : '制作時間'; ?></strong> /
+        <?php echo esc_html(get_post_meta(get_the_ID(), '制作時間', true)); ?>
+    </p>
+
+    <?php if ($is_demo && $site_demo_url) : ?>
+        <p>
+            <strong><?php echo $is_english ? 'Live Demo' : 'デモサイト'; ?></strong> /
+            <a
+                href="<?php echo esc_url($site_demo_url); ?>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <?php echo esc_html($site_demo_url); ?>
+            </a>
+        </p>
     <?php endif; ?>
 
-    <?php if ($is_demo && $github_url): ?>
-      <p>
-        GitHub /
-        <a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noopener noreferrer">
-          GitHubを見る
-        </a>
-      </p>
-
+    <?php if ($github_url) : ?>
+        <p>
+            <strong>GitHub</strong> /
+            <a
+                href="<?php echo esc_url($github_url); ?>"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <?php echo $is_english ? 'View GitHub' : 'GitHubを見る'; ?>
+            </a>
+        </p>
     <?php endif; ?>
-          </div>
+
+</div>
         </div>
       </div>
 
@@ -53,8 +71,19 @@
         <p><?php the_content(); ?></p>
       </div>
 			<div class="works__button">
-				<a href="<?php echo esc_url(home_url('#works')); ?>" class="button02">Back to page</a>
-        <a href="<?php echo esc_url(home_url('#works')); ?>" class="button03">Back to page</a>
+				<?php
+$works_url = has_category('works-en')
+    ? home_url('/en/#works')
+    : home_url('/#works');
+?>
+
+<a href="<?php echo esc_url($works_url); ?>" class="works-back-button works-back-button--pc">
+    <?php echo has_category('works-en') ? 'Back to Works' : '一覧へ戻る'; ?>
+</a>
+
+<a href="<?php echo esc_url($works_url); ?>" class="works-back-button works-back-button--sp">
+    <?php echo has_category('works-en') ? 'Back to Works' : '一覧へ戻る'; ?>
+</a>
   		</div>
     </section>
   </main>

@@ -70,7 +70,7 @@ add_theme_support('post-thumbnails');
 function yoshizo_works_grid_shortcode($atts) {
   $atts = shortcode_atts(
     array(
-      'posts'     => 12,
+      'posts'     => 14,
       'order'     => 'ASC',
       'orderby'   => 'menu_order',
       'post_type' => 'post',
@@ -82,7 +82,7 @@ function yoshizo_works_grid_shortcode($atts) {
 
  $query_args = array(
   'post_type'      => 'post',
-  'posts_per_page' => max(1, (int)$atts['posts']),
+  'posts_per_page' => -1,
   'meta_key'       => 'works_order',
   'orderby'        => 'meta_value_num',
   'order'          => 'ASC',

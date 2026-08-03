@@ -19,6 +19,28 @@ body {
   padding: 80px;
 }
 
+.meta-label {
+  font-weight: 700;
+}
+
+.required {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.about-text-en {
+  letter-spacing: normal;
+  line-height: 1.8;
+}
+
+.about-value-text {
+  letter-spacing: 0;
+}
+
+.about-text-jp {
+  line-height: 1.8;
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -480,7 +502,7 @@ body {
   }
 }
 
-.button02 {
+.works-back-button {
   display: block;
   width: 150px;
   padding: 10px 0;
@@ -492,13 +514,14 @@ body {
   transition: 0.2s;
   position: relative;
 }
+
 @media screen and (max-width: 768px) {
-  .button02 {
+  .works-back-button--pc {
     display: none;
   }
 }
 
-.button02::after {
+.works-back-button::after {
   position: absolute;
   content: "";
   width: 70px;
@@ -512,12 +535,12 @@ body {
   z-index: 10;
 }
 
-.button02:hover {
+.works-back-button:hover {
   background-color: #888;
   color: #fff;
 }
 
-.button03 {
+.works-back-button--sp {
   width: 150px;
   padding: 10px 0;
   margin: auto;
@@ -529,14 +552,15 @@ body {
   position: relative;
   display: none;
 }
+
 @media screen and (max-width: 768px) {
-  .button03 {
+  .works-back-button--sp {
     display: block;
     margin: 0 auto 160px;
   }
 }
 
-.button03::after {
+.works-back-button--sp::after {
   position: absolute;
   content: "";
   width: 70px;
@@ -550,7 +574,7 @@ body {
   z-index: 10;
 }
 
-.button03:hover {
+.works-back-button--sp:hover {
   background-color: #888;
   color: #fff;
 }
@@ -623,6 +647,50 @@ body {
     margin-bottom: 30px;
   }
 }
+.about-button {
+  width: 150px;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: relative;
+}
+
+.about-button .wp-block-button__link {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #fff;
+  border: 1px solid #83776a;
+  border-radius: 0;
+  color: #83776a;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s;
+  position: relative;
+}
+
+.about-button .wp-block-button__link:hover {
+  background-color: #83776a;
+  color: #fff;
+}
+
+.about-button .wp-block-button__link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  width: 50px;
+  height: 1px;
+  background-color: #83776a;
+  transform: translateY(-50%);
+  transition: 0.2s;
+}
+
+.about-button .wp-block-button__link:hover::after {
+  width: 60px;
+}
+
 /*******************************
 共通パーツの指定
 *******************************/
@@ -642,7 +710,7 @@ first view
   background-size: cover;
   background-position: bottom;
   position: relative;
-  padding-top: 80px;
+  padding-top: 65px;
   overflow: hidden;
 }
 
@@ -1000,7 +1068,7 @@ relevant
   display: block;
   width: 100%;
   height: auto;
-  padding-bottom: 160px;
+  padding-bottom: 2px;
   background-color: #000;
   box-sizing: border-box;
 }
@@ -1040,7 +1108,7 @@ relevant
   display: block;
   color: #fff;
   width: 100%;
-  margin: 100px auto;
+  margin: 120px auto;
   padding: 0 253px 0;
 }
 @media screen and (max-width: 1080px) {
@@ -1164,7 +1232,7 @@ strength
 .right-text {
   width: 450px;
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.6;
   max-width: 384px;
   padding-left: 20px;
 }
@@ -1241,7 +1309,7 @@ single
 *******************************/
 .single-container {
   width: 850px;
-  margin: 250px auto 0 auto;
+  margin: 100px auto 0 auto;
 }
 @media screen and (max-width: 768px) {
   .single-container {
@@ -1415,7 +1483,7 @@ page-about
 .about-textbox {
   position: absolute;
   padding: 0 25px;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -1450,6 +1518,11 @@ contact-form
   margin: 160px auto 50px;
 }
 
+.contact_text {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .contact__continer {
   position: relative;
   max-width: 565px;
@@ -1459,6 +1532,13 @@ contact-form
   padding: 50px 100px;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 4px gray;
+}
+
+.submit__button input[type=submit] {
+  width: auto;
+  min-width: 180px;
+  padding: 12px 24px;
+  white-space: nowrap;
 }
 
 /* ループ */

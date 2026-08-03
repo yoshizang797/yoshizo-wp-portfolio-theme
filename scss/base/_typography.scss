@@ -17,3 +17,25 @@ body {
   margin-top: 80px;
   padding: 80px;
 }
+
+.meta-label {
+    font-weight: 700;
+}
+
+.required {
+    color: #e53935;
+    font-weight: bold;
+}
+
+.about-text-en {
+  letter-spacing: normal;
+  line-height: 1.8;
+}
+
+.about-value-text {
+  letter-spacing: 0;
+}
+
+.about-text-jp {
+  line-height: 1.8;
+}
