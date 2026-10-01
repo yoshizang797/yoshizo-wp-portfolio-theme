@@ -1,9 +1,9 @@
 @charset "UTF-8";
 html {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic Medium", "Yu Gothic", Meiryo, "Noto Sans JP", sans-serif;
   color: #333;
-  letter-spacing: 0.08em;
-  line-height: 1.5;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
   scroll-behavior: smooth;
 }
 
@@ -968,9 +968,10 @@ concept
     flex-direction: column;
   }
   .wp-block-column {
+    display: flex;
     width: 100% !important;
-    flex-basis: 100% !important;
     margin-left: 0 !important;
+    justify-content: center;
   }
   .concept__img {
     text-align: center;
@@ -1215,6 +1216,11 @@ strength
   display: inline-block;
   /*width: 100%; /* 必要に応じて調整 */
   max-width: 800px; /* 画像サイズ上限 */
+}
+@media screen and (max-width: 781px) {
+  .left-box {
+    margin: 0 auto;
+  }
 }
 
 .s-text {
