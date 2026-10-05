@@ -76,13 +76,15 @@ if ($is_english_page) {
     $footer_home_url    = home_url('/en/');
     $footer_about_url   = home_url('/en/about-en/');
     $footer_works_url   = home_url('/en/') . '#works';
+    $footer_trouble_url = home_url('/en/') . '#trouble';
+    $footer_price_url   = home_url('/en/') . '#price';
     $footer_contact_url = home_url('/en/contact-en/');
 } else {
     $footer_home_url    = home_url('/');
     $footer_about_url   = home_url('/about/');
-    $footer_trouble_url = home_url('/') . '#trouble';
-    $footer_price_url   = home_url('/') . '#price';
     $footer_works_url   = home_url('/') . '#works';
+    $footer_trouble_url = home_url('/') . '#trouble';
+    $footer_price_url   = home_url('/') . '#price';   
     $footer_contact_url = home_url('/contact/');
 }
 ?>
@@ -93,29 +95,22 @@ if ($is_english_page) {
 
         <nav class="footer__nav">
             <ul class="footer__list">
-                <li class="tooter__item">
+                <li class="footer__item">
                     <a href="<?php echo esc_url($footer_home_url); ?>">HOME</a>
                 </li>
-
-                <li class="tooter__item">
+                <li class="footer__item">
                     <a href="<?php echo esc_url($footer_about_url); ?>">ABOUT</a>
                 </li>
-
-                <?php if (!$is_english_page): ?>
-                <li class="tooter__item">
+                <li class="footer__item">
+                    <a href="<?php echo esc_url($footer_works_url); ?>">WORKS</a>
+                </li>            
+                <li class="footer__item">
                     <a href="<?php echo esc_url($footer_trouble_url); ?>">TROUBLE</a>
                 </li>
-
-                <li class="tooter__item">
+                <li class="footer__item">
                     <a href="<?php echo esc_url($footer_price_url); ?>">PRICE</a>
-                </li>
-                <?php endif; ?>
-
-                <li class="tooter__item">
-                    <a href="<?php echo esc_url($footer_works_url); ?>">WORKS</a>
-                </li>
-
-                <li class="tooter__item">
+                </li>            
+                <li class="footer__item">
                     <a href="<?php echo esc_url($footer_contact_url); ?>">CONTACT</a>
                 </li>
             </ul>
