@@ -12,12 +12,18 @@
 first view
 *******************************/
 .firstView {
-  height: 900px;
-  margin: 100px auto 0;
+  margin: auto 0;
   background-size: cover;
   background-position: bottom;
   position: relative;
-  padding-top: 65px;
+  overflow: hidden; 
+}
+
+.firstView_en {
+  margin: auto 0;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
   overflow: hidden;
 }
 
@@ -27,18 +33,13 @@ first view
 }
 
 .firstView__text {
-  position: absolute;
-  bottom: 150px;
-  left: 25px;
+  margin-top: 220px;
   display: block;
   align-items: center;
   font-family: "Noto Serif JP";
   font-size: 16px;
   font-weight: Medium;
   color: #333;
-  @media screen and (max-width: 600px) {
-    left: 0;
-  }
 }
 
 .firstView__text .firstView__github {
@@ -52,23 +53,21 @@ first view
 .firstView__title {
   font-family: "Georgia";
   font-size: 32px;
-  position: absolute;
-  top: 30%;
+  margin-top: 365px;
+  padding-inline: 24px;
   letter-spacing: 0.8em;
   width: 100%;
   text-align: center;
-  @media screen  and (max-width: 842px) {
-    width: auto;
-    font-size: 24px;
-    position: relative;
-    margin-top: 185px;
+  @media screen and (max-width: 426px) {
+    margin-top: 265px;
+    letter-spacing: 0.6em;
   }
-  @media screen and (max-width: 631px) {
-    top: 20%;
-  }
-  @media screen and (max-width: 397px) {
-    top: 12%;
-  }
+}
+
+.firstView__title_en {
+  margin-top: 230px;
+  padding-inline: 24px;
+  width: 100%;
 }
 
 .firstView_sab_text {
@@ -76,6 +75,10 @@ first view
   font-weight: normal;
   text-align: center;
   letter-spacing: 0.6em;
+}
+
+.firstView_sab_text_en {
+  line-height: 1.7em;
 }
 
 .sp-br {
@@ -96,12 +99,6 @@ first view
   font-size: 16px;
   font-weight: Medium;
   color: #333;
-  @media screen and (max-width: 600px) {
-    left: 0;
-  }
-  @media screen and (max-width: 341px) {
-    bottom: 77px;
-  }
 }
 
 .fv-caption {
@@ -114,55 +111,45 @@ first view
   letter-spacing: 0.6em;
   width: 100%;
   text-align: center;
-
-  @media screen and (max-width: 1075px){
-    margin-top: 0;
-  }
-
-  @media screen and (max-width: 397px){
-    margin-top: 0;
-  }
 }
 
 .firstView__img {
   margin-left: auto;
 }
 
+.wp-block-paragraph{
+  padding-inline: 24px;
+}
 /*******************************
 concept
 *******************************/
 .concept_title {
   width: 100%;
   height: auto;
-
 }
 
 .concept-title-img {
-  position: absolute;
-  left: 45%;
-  width: 478px;
+  left: 50%;
+  max-width: 100%;
   height: auto;
   z-index: 50;
-  @media screen and (max-width: 781px){
+  /*@media screen and (max-width: 781px){
     width: auto;
     position: revert;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-  }
+  }*/
 }
 
 .u-container {
   max-width: 1080px;
   display: flex;
-  padding: 0 75px 0;
+  padding: 0 20px 0;
   margin: 0 auto;
   gap: 32px;
-  @media screen and (max-width: 768px) {
-    display: flex;
-    padding: 0;
-    flex-direction: column-reverse;
-    margin-bottom: 30px;  
+  @media screen and (max-width: 781px) {
+     justify-content: center;
   } 
 }
 
@@ -173,21 +160,29 @@ concept
   margin: 160px 0;
   box-sizing: border-box;
   overflow: hidden;
-  @media screen and (max-width: 768px) {
+  /*@media screen and (max-width: 768px) {
     margin: 0;
-  }
+  }*/
 }
 
 .concept__img {
   max-width: 90%;
   width: auto;
   height: auto;
+  margin: 0 auto;
   opacity: 0.9;
   z-index: 40;
-  @media screen and (max-width: 768px) {
+  /*@media screen and (max-width: 768px) {
     display: flex;
     justify-content: center;
-    }
+    }*/
+}
+
+.concept-text-box {
+  display: flex;
+  /*@media screen and (max-width: 781px) {
+    display: block;
+  }*/
 }
 
 .concept__title {
@@ -195,65 +190,64 @@ concept
   margin: 0 0 25px -70px;
   letter-spacing: 0.17em;
   z-index: 50;
-  @media screen and (max-width: 768px) {
+  /*@media screen and (max-width: 768px) {
     display: flex;
     justify-content: center;
     margin-bottom: 32px;
     margin-left: 0;
-  } 
+  } */
 }
 
 .concept__text {
   font-size: 32px;
-  margin: 158px 0 25px 0;
+  margin: 25px 0 25px 0;
   letter-spacing: 0.17em;
   display: flex;
-  @media screen and (max-width: 768px) {
+  /*@media screen and (max-width: 768px) {
     margin: 0;
     font-size: 24px;
     margin-bottom: 5px;
     padding: 10px;
     text-align: center;
     display: block;
-  } 
+  } */
+}
+
+.concept__text_en {
+  font-size: 32px;
+  margin: 25px 0 25px 0;
+  line-height: normal;
+  display: flex;
 }
 
 .concept-second-text {
   font-size: 16px;
   line-height: 30px;
-  @media screen and (max-width: 768px) {
+  /*@media screen and (max-width: 768px) {
     margin-left: 0;
     margin-bottom: 22px;
     padding: 10px;
     font-size: 12px;
     text-align: center;
-  } 
+  } */
 }
 
 .concept-third-text{
   font-size: large;
   margin-bottom: 45px;
-
-  @media screen and (max-width: 768px) {
+  /*@media screen and (max-width: 768px) {
     text-align: center;
-  }
+  }*/
 }
 
-@media screen and (max-width: 781px) {
-  .wp-block-columns {
-    display: flex;
-    flex-direction: column; 
-  }
-
   .wp-block-column {
-    display: flex;
+    display: block;
     width: 100% !important;
     margin-left: 0 !important;
     justify-content: center;
-  }
-
-  .concept__img {
-    text-align: center;
+    @media screen and (max-width: 781px) {
+      text-align: center;
+    }
   }
 
   .concept__img img {
@@ -262,7 +256,7 @@ concept
     max-width: 90%;
     height: auto;
   }
-}
+
 
 /*-------------------------------------------
 works&grid
